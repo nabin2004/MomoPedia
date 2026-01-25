@@ -1,34 +1,19 @@
-from langgraph.graph import StateGraph, END
 from momopedia.state import MomoState
-from momopedia.agents.author import author_node
-from momopedia.agents.reviewer import reviewer_node
+from momopedia.main import app  # your compiled workflow
 
-workflow = StateGraph(MomoState)
-
-workflow.add_node("author", author_node)
-workflow.add_node("reviewer", reviewer_node)
-
-workflow.set_entry_point("author")
-
-workflow.add_edge("author", "reviewer")
-
-
-def route_after_review(state: MomoState):
-    # This function looks at the state and decides where to go next
-    if state["next_step"] == "author":
-        # If the reviewer said 'revise', go back to author
-        return "author"
-    else:
-        # If 'approve', we go to the Chair (or END for now)
-        return END
-
-workflow.add_conditional_edges(
-    "reviewer",
-    route_after_review,
-    {
-        "author": "author",
-        "end": END
-    }
+# Step 1: define initial state
+initial_state = MomoState(
+    topic="History of momo in Nepal",  # example input
+    messages=[],                       # conversation history
+    iteration=0,
+    next_step="author"
 )
 
-app = workflow.compile()
+# Step 2: run the workflow
+final_state = app.invoke(initial_state)
+
+# Step 3: inspect results
+print("Final state:")
+print(final_state)
+print("\nFinal article content:")
+print(final_state.get("article", "No article generated"))

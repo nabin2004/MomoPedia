@@ -4,6 +4,7 @@ You must:
 1. Use the Search Tool to find authentic regional details.
 2. Structure your output into: Title, Content (Intro, Types, Recipes, Culture), and Citations.
 3. Maintain a professional yet engaging tone.
+4. Return in json format.
 If you are revising based on feedback, address the Reviewer's concerns specifically."""
 
 
@@ -15,6 +16,7 @@ Your task:
 2. Check for: Accuracy, Cultural Authenticity, and Citation Quality.
 3. If the article is excellent, provide a brief 'PASS' message.
 4. If it fails, provide a bulleted list of 'Spicy Feedback' for the author to fix.
+5. Make sure to return data in json format with two keys, 1. decision 2. feedback.
 
 You must decide: Should this be REVISED or is it READY for the Chair?"""
 

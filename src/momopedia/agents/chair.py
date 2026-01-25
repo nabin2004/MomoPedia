@@ -2,12 +2,14 @@ from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 from momopedia.state import MomoState
 from momopedia.prompts.personas import CHAIR_PROMPT
+from momopedia.llm import get_llm  
 
 class ChairDecision(BaseModel):
-    decision: str = Field(description="'ACCEPTED' or 'REJECTED'")
-    memo: str = Field(description="Final editorial notes for the public record")
+    Decision: str = Field(description="'ACCEPTED' or 'REJECTED'")
+    Memo: str = Field(default="No memo provided", description="Final editorial notes")
 
-llm = ChatOpenAI(model="gpt-4o", temperature=0)
+
+llm = get_llm()
 structured_chair = llm.with_structured_output(ChairDecision)
 
 def chair_node(state: MomoState):
@@ -20,9 +22,10 @@ def chair_node(state: MomoState):
     ]
     
     response = structured_chair.invoke(messages)
-    
+    print("RESPONSE: ", response)
+    print("TYPE OF RESPONSE: ", response)
     return {
-        "messages": [f"CHAIR DECISION: {response.decision}. Memo: {response.memo}"],
-        "chair_decision": response.decision,
+        "messages": [f"CHAIR DECISION: {response.Decision}. Memo: {response.Memo}"],
+        "chair_decision": response.Decision,
         "next_step": "end"
     }
