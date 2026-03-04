@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<article class="recipe-page">
+  <header class="recipe-header">
+    <h1 class="recipe-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="recipe-description">{{ page.description }}</p>
+    {% endif %}
+    <div class="recipe-meta">
+      {% if page.yield %}<span class="recipe-yield">Yield: {{ page.yield }}</span>{% endif %}
+      {% if page.prep_time %}<span class="recipe-prep">Prep: {{ page.prep_time }}</span>{% endif %}
+      {% if page.cook_time %}<span class="recipe-cook">Cook: {{ page.cook_time }}</span>{% endif %}
+    </div>
+  </header>
+
+  <div class="recipe-ingredients">
+    <h2>Ingredients</h2>
+    {{ content | split: '### Directions' | first }}
+  </div>
+
+  <div class="recipe-directions">
+    <h2>Directions</h2>
+    {% assign parts = content | split: '### Directions' %}
+    {% if parts.size > 1 %}
+      {{ parts.last }}
+    {% endif %}
+  </div>
+</article>

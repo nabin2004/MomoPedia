@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<section class="region-page">
+  <header class="region-header">
+    <h1 class="region-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="region-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="region-content">
+    {{ content }}
+  </div>
+
+  {% if site.regions and site.regions != empty %}
+    <div class="region-articles">
+      <h2>Related Entries</h2>
+      <ul>
+        {% for entry in site.regions %}
+          <li><a href="{{ entry.url | relative_url }}">{{ entry.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</section>
