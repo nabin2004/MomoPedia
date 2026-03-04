@@ -1,0 +1,100 @@
+title: "MomoPedia"
+description: "The world's most comprehensive AI-powered encyclopedia dedicated to momos"
+url: "https://nabin.github.io"  # Update with actual GitHub username
+baseurl: "/MomoPedia"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  articles:
+    output: true
+    permalink: /:collection/:name/
+  regions:
+    output: true
+    permalink: /regions/:name/
+  recipes:
+    output: true
+    permalink: /recipes/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "regions"  
+    values:
+      layout: "region"
+  - scope:
+      path: ""
+      type: "recipes"
+    values:
+      layout: "recipe"
+
+# Site settings
+author: "MomoPedia Team"
+email: "hello@momopedia.org"
+github_username: "nabin"  # Update with actual username
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Articles"
+    url: "/articles/"
+  - title: "Regions"
+    url: "/regions/"
+  - title: "Recipes" 
+    url: "/recipes/"
+  - title: "About"
+    url: "/about/"
+  - title: "API"
+    url: "/api/"
+
+# Social media
+social_links:
+  github: "https://github.com/nabin/MomoPedia"
+  twitter: "@MomoPedia"
+  instagram: "@momopedia_official"
+
+# Feature flags
+features:
+  ai_content: true
+  multilingual: true
+  community_contributions: true
+  recipe_calculator: true
+
+# SEO
+google_analytics: "G-XXXXXXXXXX"  # Add actual tracking ID
+logo: "/assets/images/logo.png"
+
+# Pagination
+paginate: 12
+paginate_path: "/page:num/"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - src/
+  - package.json
+  - package-lock.json
+
+include:
+  - _pages

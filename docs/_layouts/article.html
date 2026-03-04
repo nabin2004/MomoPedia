@@ -1,0 +1,121 @@
+---
+layout: default
+---
+
+<article class="article-page">
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="article-meta">
+      {% if page.region %}
+        <span class="article-region">{{ page.region }}</span>
+      {% endif %}
+      {% if page.date %}
+        <time class="article-date" datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %d, %Y" }}
+        </time>
+      {% endif %}
+      {% if page.ai_generated %}
+        <span class="ai-generated-badge">✨ AI Generated</span>
+      {% endif %}
+    </div>
+    
+    <h1 class="article-title">{{ page.title }}</h1>
+    
+    {% if page.subtitle %}
+      <p class="article-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    
+    {% if page.description %}
+      <p class="article-description">{{ page.description }}</p>
+    {% endif %}
+    
+    {% if page.author %}
+      <div class="article-author">
+        <span>By {{ page.author }}</span>
+        {% if page.reviewer %}
+          <span class="reviewer-info">• Reviewed by {{ page.reviewer }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+  </header>
+  
+  <!-- Article Image -->
+  {% if page.image %}
+    <div class="article-image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+      {% if page.image_caption %}
+        <figcaption class="image-caption">{{ page.image_caption }}</figcaption>
+      {% endif %}
+    </div>
+  {% endif %}
+  
+  <!-- Article Content -->
+  <div class="article-content">
+    {{ content }}
+  </div>
+  
+  <!-- Article Tags -->
+  {% if page.tags and page.tags.size > 0 %}
+    <div class="article-tags">
+      <h3>Tags</h3>
+      <ul class="tag-list">
+        {% for tag in page.tags %}
+          <li class="tag-item">
+            <a href="{{ '/tags/#' | append: tag | relative_url }}" class="tag-link">{{ tag }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  
+  <!-- Citations -->
+  {% if page.citations and page.citations.size > 0 %}
+    <div class="article-citations">
+      <h3>Citations & Sources</h3>
+      <ol class="citations-list">
+        {% for citation in page.citations %}
+          <li class="citation-item">
+            {% if citation.url %}
+              <a href="{{ citation.url }}" target="_blank" rel="noopener">{{ citation.text }}</a>
+            {% else %}
+              {{ citation }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  {% endif %}
+  
+  <!-- AI Generation Information -->
+  {% if page.ai_generated %}
+    <div class="ai-info">
+      <h3>AI Generation Details</h3>
+      <div class="ai-workflow-info">
+        <p>This article was created using our AI-powered content generation system:</p>
+        <ul>
+          <li><strong>Author AI:</strong> Researched and wrote the initial content</li>
+          <li><strong>Reviewer AI (Dr. Spicy):</strong> Reviewed for accuracy and authenticity</li>
+          <li><strong>Editorial Chair:</strong> Made final approval for publication</li>
+        </ul>
+        {% if page.ai_iterations %}
+          <p><em>This article went through {{ page.ai_iterations }} revision cycles before approval.</em></p>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+  
+  <!-- Navigation -->
+  <nav class="article-navigation">
+    {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}" class="nav-previous">
+        ← {{ page.previous.title }}
+      </a>
+    {% endif %}
+    
+    {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" class="nav-next">
+        {{ page.next.title }} →
+      </a>
+    {% endif %}
+  </nav>
+</article>

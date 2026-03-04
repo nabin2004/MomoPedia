@@ -1,0 +1,45 @@
+<header class="momo-header">
+  <nav class="momo-nav">
+    <div class="nav-container">
+      <!-- Logo and Brand -->
+      <div class="nav-brand">
+        <a href="{{ '/' | relative_url }}" class="brand-link">
+          <div class="brand-logo">
+            <span class="momo-icon">🥟</span>
+            <span class="brand-text">MomoPedia</span>
+          </div>
+          <span class="brand-tagline">AI-Powered Momo Encyclopedia</span>
+        </a>
+      </div>
+      
+      <!-- Navigation Menu -->
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          {% for item in site.navigation %}
+            <li class="nav-item">
+              <a href="{{ item.url | relative_url }}" 
+                 class="nav-link {% if page.url == item.url %}active{% endif %}">
+                {{ item.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      
+      <!-- AI Status Indicator -->
+      <div class="ai-status">
+        <span class="ai-indicator">
+          <span class="ai-pulse"></span>
+          AI Active
+        </span>
+      </div>
+    </div>
+  </nav>
+</header>

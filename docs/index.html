@@ -1,0 +1,237 @@
+---
+layout: default
+title: Home
+description: "Welcome to MomoPedia - the world's first AI-powered encyclopedia dedicated exclusively to momos"
+---
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">
+        Welcome to <span class="brand-highlight">MomoPedia</span>
+      </h1>
+      <p class="hero-subtitle">
+        The world's first AI-powered encyclopedia dedicated exclusively to momos
+      </p>
+      <p class="hero-description">
+        Discover the rich cultural heritage, diverse regional varieties, and authentic recipes 
+        of momos from around the world. Powered by advanced AI agents that research, review, 
+        and curate content with cultural authenticity and culinary precision.
+      </p>
+      <div class="hero-actions">
+        <a href="{{ '/articles/' | relative_url }}" class="btn btn-primary">
+          Explore Articles
+        </a>
+        <a href="{{ '/api/' | relative_url }}" class="btn btn-secondary">
+          API Documentation
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="momo-illustration">
+        <div class="momo-steam"></div>
+        <div class="momo-shape">🥟</div>
+        <div class="ai-particles">
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+  <div class="section-header">
+    <h2 class="section-title">Why MomoPedia?</h2>
+    <p class="section-description">
+      Combining AI technology with cultural expertise to create the most comprehensive momo resource
+    </p>
+  </div>
+  
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon ai-icon">🤖</div>
+      <h3 class="feature-title">AI-Powered Content</h3>
+      <p class="feature-description">
+        Our multi-agent AI system researches, writes, and reviews content with 
+        accuracy standards that rival human experts.
+      </p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon cultural-icon">🌍</div>
+      <h3 class="feature-title">Cultural Authenticity</h3>
+      <p class="feature-description">
+        Every article is verified for cultural accuracy and authenticity by our 
+        AI reviewers trained on diverse cultural sources.
+      </p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon recipe-icon">📖</div>
+      <h3 class="feature-title">Comprehensive Recipes</h3>
+      <p class="feature-description">
+        From traditional family recipes to modern variations, we document 
+        the complete spectrum of momo preparation techniques.
+      </p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon community-icon">👥</div>
+      <h3 class="feature-title">Community Driven</h3>
+      <p class="feature-description">
+        Built with input from momo enthusiasts, chefs, and cultural experts 
+        from around the world.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Articles Section -->
+<section class="recent-articles-section">
+  <div class="section-header">
+    <h2 class="section-title">Latest Articles</h2>
+    <p class="section-description">
+      Recently published content from our AI editorial team
+    </p>
+  </div>
+  
+  <div class="articles-grid">
+    <!-- Sample articles - these would be dynamic in a real implementation -->
+    <article class="article-card">
+      <div class="article-image">
+        <div class="placeholder-image">🇳🇵</div>
+      </div>
+      <div class="article-content">
+        <div class="article-meta">
+          <span class="article-region">Nepal</span>
+          <span class="article-date">{{ 'now' | date: '%B %d, %Y' }}</span>
+        </div>
+        <h3 class="article-title">Traditional Nepali Momos: A Cultural Journey</h3>
+        <p class="article-excerpt">
+          Explore the origins and cultural significance of Nepal's beloved momos, 
+          from street vendors in Kathmandu to family kitchens across the Himalayas.
+        </p>
+        <div class="article-actions">
+          <a href="#" class="read-more">Read Article</a>
+          <span class="ai-generated">✨ AI Generated</span>
+        </div>
+      </div>
+    </article>
+    
+    <article class="article-card">
+      <div class="article-image">
+        <div class="placeholder-image">🇹🇧</div>
+      </div>
+      <div class="article-content">
+        <div class="article-meta">
+          <span class="article-region">Tibet</span>
+          <span class="article-date">{{ 'now' | date: '%B %d, %Y' }}</span>
+        </div>
+        <h3 class="article-title">Tibetan Momo Variations and Regional Differences</h3>
+        <p class="article-excerpt">
+          Discover the diverse world of Tibetan momos, including yak meat varieties 
+          and traditional steaming techniques passed down through generations.
+        </p>
+        <div class="article-actions">
+          <a href="#" class="read-more">Read Article</a>
+          <span class="ai-generated">✨ AI Generated</span>
+        </div>
+      </div>
+    </article>
+    
+    <article class="article-card">
+      <div class="article-image">
+        <div class="placeholder-image">🇮🇳</div>
+      </div>
+      <div class="article-content">
+        <div class="article-meta">
+          <span class="article-region">India</span>
+          <span class="article-date">{{ 'now' | date: '%B %d, %Y' }}</span>
+        </div>
+        <h3 class="article-title">Darjeeling Momos: Hill Station Delicacies</h3>
+        <p class="article-excerpt">
+          Learn about the unique momo culture in India's hill stations, where 
+          Tibetan refugees created a fusion of flavors that defines the region.
+        </p>
+        <div class="article-actions">
+          <a href="#" class="read-more">Read Article</a>
+          <span class="ai-generated">✨ AI Generated</span>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="section-actions">
+    <a href="{{ '/articles/' | relative_url }}" class="btn btn-outline">
+      View All Articles
+    </a>
+  </div>
+</section>
+
+<!-- AI Technology Section -->
+<section class="ai-technology-section">
+  <div class="ai-content">
+    <div class="ai-text">
+      <h2 class="ai-title">Powered by Advanced AI</h2>
+      <p class="ai-description">
+        Our sophisticated multi-agent system combines the expertise of specialized AI agents:
+      </p>
+      <ul class="ai-agents-list">
+        <li class="ai-agent">
+          <strong>Author Agent:</strong> Researches and writes comprehensive articles using web sources
+        </li>
+        <li class="ai-agent">
+          <strong>Dr. Spicy (Reviewer):</strong> Critically reviews content for accuracy and cultural authenticity
+        </li>
+        <li class="ai-agent">
+          <strong>Editorial Chair:</strong> Makes final publication decisions and maintains quality standards
+        </li>
+      </ul>
+      <div class="ai-actions">
+        <a href="{{ '/ai-methodology/' | relative_url }}" class="btn btn-ai">
+          Learn About Our AI
+        </a>
+      </div>
+    </div>
+    <div class="ai-visual">
+      <div class="ai-workflow">
+        <div class="ai-step">
+          <div class="step-icon">📝</div>
+          <span>Research & Write</span>
+        </div>
+        <div class="workflow-arrow">→</div>
+        <div class="ai-step">
+          <div class="step-icon">🔍</div>
+          <span>Review & Critique</span>
+        </div>
+        <div class="workflow-arrow">→</div>
+        <div class="ai-step">
+          <div class="step-icon">✅</div>
+          <span>Approve & Publish</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta-section">
+  <div class="cta-content">
+    <h2 class="cta-title">Ready to Explore the World of Momos?</h2>
+    <p class="cta-description">
+      Start your journey through our AI-curated collection of momo knowledge
+    </p>
+    <div class="cta-actions">
+      <a href="{{ '/articles/' | relative_url }}" class="btn btn-primary btn-large">
+        Start Exploring
+      </a>
+      <a href="https://github.com/{{ site.github_username }}/MomoPedia" class="btn btn-secondary btn-large" target="_blank">
+        View on GitHub
+      </a>
+    </div>
+  </div>
+</section>
