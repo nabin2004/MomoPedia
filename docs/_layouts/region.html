@@ -14,12 +14,47 @@ layout: default
     {{ content }}
   </div>
 
-  {% if site.regions and site.regions != empty %}
+  <!-- Articles related to this region -->
+  {% assign region_articles = site.articles | where_exp: "item", "item.region contains page.region" %}
+  {% if region_articles.size > 0 %}
     <div class="region-articles">
-      <h2>Related Entries</h2>
-      <ul>
+      <h2>📝 Articles About {{ page.region }} Momos</h2>
+      <ul class="collection-list">
+        {% for article in region_articles %}
+          <li class="collection-item">
+            <a href="{{ article.url | relative_url }}">{{ article.title }}</a>
+            {% if article.description %}<span class="muted"> — {{ article.description | truncatewords: 15 }}</span>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <!-- Recipes that might be relevant -->
+  {% if site.recipes.size > 0 %}
+    <div class="region-recipes">
+      <h2>🍳 Recipes & Chutneys</h2>
+      <ul class="collection-list">
+        {% for recipe in site.recipes %}
+          <li class="collection-item">
+            <a href="{{ recipe.url | relative_url }}">{{ recipe.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <!-- Other regions -->
+  {% if site.regions.size > 1 %}
+    <div class="region-nav">
+      <h2>🌏 Explore Other Regions</h2>
+      <ul class="collection-list">
         {% for entry in site.regions %}
-          <li><a href="{{ entry.url | relative_url }}">{{ entry.title }}</a></li>
+          {% unless entry.url == page.url %}
+            <li class="collection-item">
+              <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
+            </li>
+          {% endunless %}
         {% endfor %}
       </ul>
     </div>

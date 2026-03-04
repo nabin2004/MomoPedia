@@ -58,6 +58,8 @@ navigation:
     url: "/regions/"
   - title: "Recipes" 
     url: "/recipes/"
+  - title: "Chutneys"
+    url: "/chutneys/"
   - title: "About"
     url: "/about/"
   - title: "API"

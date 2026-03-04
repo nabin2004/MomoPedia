@@ -9,22 +9,42 @@ layout: default
       <p class="recipe-description">{{ page.description }}</p>
     {% endif %}
     <div class="recipe-meta">
-      {% if page.yield %}<span class="recipe-yield">Yield: {{ page.yield }}</span>{% endif %}
-      {% if page.prep_time %}<span class="recipe-prep">Prep: {{ page.prep_time }}</span>{% endif %}
-      {% if page.cook_time %}<span class="recipe-cook">Cook: {{ page.cook_time }}</span>{% endif %}
+      {% if page.yield %}<span class="recipe-yield">🍽 Yield: {{ page.yield }}</span>{% endif %}
+      {% if page.prep_time %}<span class="recipe-prep">⏱ Prep: {{ page.prep_time }}</span>{% endif %}
+      {% if page.cook_time %}<span class="recipe-cook">🔥 Cook: {{ page.cook_time }}</span>{% endif %}
     </div>
+    {% if page.tags and page.tags.size > 0 %}
+      <div class="recipe-tags">
+        {% for tag in page.tags %}
+          <span class="tag-badge">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
   </header>
 
-  <div class="recipe-ingredients">
-    <h2>Ingredients</h2>
-    {{ content | split: '### Directions' | first }}
+  <div class="recipe-content">
+    {{ content }}
   </div>
 
-  <div class="recipe-directions">
-    <h2>Directions</h2>
-    {% assign parts = content | split: '### Directions' %}
-    {% if parts.size > 1 %}
-      {{ parts.last }}
-    {% endif %}
-  </div>
+  {% if page.author %}
+    <div class="recipe-author">
+      <p><em>Recipe by {{ page.author }}</em></p>
+    </div>
+  {% endif %}
+
+  <!-- More Recipes -->
+  {% if site.recipes.size > 1 %}
+    <div class="more-recipes">
+      <h2>More Recipes</h2>
+      <ul class="collection-list">
+        {% for recipe in site.recipes %}
+          {% unless recipe.url == page.url %}
+            <li class="collection-item">
+              <a href="{{ recipe.url | relative_url }}">{{ recipe.title }}</a>
+            </li>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
 </article>
