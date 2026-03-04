@@ -1,0 +1,37 @@
+:root {
+  /* Primary Palette */
+  --momo-dough: #F5E6D3;
+  --steam-white: #FFFFFF;
+  --spice-red: #C8102E;
+  --wisdom-deep: #1B365D;
+  
+  /* Secondary Palette */
+  --turmeric-gold: #E6B800;
+  --fresh-herb: #4A7C59;
+  --soy-dark: #3C2415;
+  --ginger-warm: #D4A574;
+  
+  /* Accent Colors */
+  --chili-hot: #FF4444;
+  --mint-cool: #66D9A3;
+  --saffron-highlight: #FF8C42;
+  --lavender-soft: #B19CD9;
+  
+  /* Semantic Colors */
+  --primary-color: var(--spice-red);
+  --secondary-color: var(--wisdom-deep);
+  --background-color: var(--momo-dough);
+  --text-color: var(--soy-dark);
+  --accent-color: var(--saffron-highlight);
+  --success-color: var(--mint-cool);
+  --warning-color: var(--turmeric-gold);
+  --danger-color: var(--chili-hot);
+  
+  /* Additional Variations */
+  --spice-red-light: #E8394A;
+  --spice-red-dark: #A00D25;
+  --wisdom-deep-light: #2D4A73;
+  --wisdom-deep-dark: #0F1F35;
+  --momo-dough-light: #FAF1E6;
+  --momo-dough-dark: #E8D4C0;
+}

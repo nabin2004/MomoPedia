@@ -1,0 +1,47 @@
+{
+  "primary": {
+    "momo_dough": "#F5E6D3",
+    "steam_white": "#FFFFFF", 
+    "spice_red": "#C8102E",
+    "wisdom_deep": "#1B365D"
+  },
+  "secondary": {
+    "turmeric_gold": "#E6B800",
+    "fresh_herb": "#4A7C59",
+    "soy_dark": "#3C2415",
+    "ginger_warm": "#D4A574"
+  },
+  "accent": {
+    "chili_hot": "#FF4444",
+    "mint_cool": "#66D9A3",
+    "saffron_highlight": "#FF8C42",
+    "lavender_soft": "#B19CD9"
+  },
+  "semantic": {
+    "primary": "#C8102E",
+    "secondary": "#1B365D",
+    "background": "#F5E6D3",
+    "text": "#3C2415",
+    "accent": "#FF8C42",
+    "success": "#66D9A3",
+    "warning": "#E6B800",
+    "danger": "#FF4444"
+  },
+  "variations": {
+    "spice_red": {
+      "light": "#E8394A",
+      "base": "#C8102E",
+      "dark": "#A00D25"
+    },
+    "wisdom_deep": {
+      "light": "#2D4A73",
+      "base": "#1B365D", 
+      "dark": "#0F1F35"
+    },
+    "momo_dough": {
+      "light": "#FAF1E6",
+      "base": "#F5E6D3",
+      "dark": "#E8D4C0"
+    }
+  }
+}

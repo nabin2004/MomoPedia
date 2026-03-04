@@ -1,0 +1,67 @@
+// MomoPedia Brand Colors - SCSS Variables
+
+// Primary Palette
+$momo-dough: #F5E6D3;
+$steam-white: #FFFFFF;
+$spice-red: #C8102E;
+$wisdom-deep: #1B365D;
+
+// Secondary Palette  
+$turmeric-gold: #E6B800;
+$fresh-herb: #4A7C59;
+$soy-dark: #3C2415;
+$ginger-warm: #D4A574;
+
+// Accent Colors
+$chili-hot: #FF4444;
+$mint-cool: #66D9A3;
+$saffron-highlight: #FF8C42;
+$lavender-soft: #B19CD9;
+
+// Semantic Color Mappings
+$primary-color: $spice-red;
+$secondary-color: $wisdom-deep;
+$background-color: $momo-dough;
+$text-color: $soy-dark;
+$accent-color: $saffron-highlight;
+$success-color: $mint-cool;
+$warning-color: $turmeric-gold;
+$danger-color: $chili-hot;
+
+// Color Variations
+$spice-red-light: lighten($spice-red, 8%);
+$spice-red-dark: darken($spice-red, 10%);
+$wisdom-deep-light: lighten($wisdom-deep, 12%);
+$wisdom-deep-dark: darken($wisdom-deep, 15%);
+$momo-dough-light: lighten($momo-dough, 5%);
+$momo-dough-dark: darken($momo-dough, 8%);
+
+// Color Maps for Dynamic Usage
+$brand-colors: (
+  'primary': $primary-color,
+  'secondary': $secondary-color,
+  'accent': $accent-color,
+  'success': $success-color,
+  'warning': $warning-color,
+  'danger': $danger-color
+);
+
+$momo-palette: (
+  'dough': $momo-dough,
+  'steam': $steam-white,
+  'spice': $spice-red,
+  'wisdom': $wisdom-deep,
+  'turmeric': $turmeric-gold,
+  'herb': $fresh-herb,
+  'soy': $soy-dark,
+  'ginger': $ginger-warm
+);
+
+// Utility Functions
+@function brand-color($color-name) {
+  @return map-get($brand-colors, $color-name);
+}
+
+@function momo-color($color-name) {
+  @return map-get($momo-palette, $color-name);
+}
