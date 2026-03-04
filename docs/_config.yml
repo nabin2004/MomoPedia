@@ -1,6 +1,6 @@
 title: "MomoPedia"
-description: "The world's most comprehensive AI-powered encyclopedia dedicated to momos"
-url: "https://nabin.github.io"  # Update with actual GitHub username
+description: "An AI-powered encyclopedia dedicated to momos"
+url: "https://nabin2004.github.io"
 baseurl: "/MomoPedia"
 
 # Build settings
@@ -46,7 +46,7 @@ defaults:
 # Site settings
 author: "MomoPedia Team"
 email: "hello@momopedia.org"
-github_username: "nabin"  # Update with actual username
+github_username: "nabin2004"
 
 # Navigation
 navigation:
