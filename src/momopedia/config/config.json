@@ -1,0 +1,55 @@
+{
+  "llm": {
+    "model": "xiaomi/mimo-v2-flash:free",
+    "temperature": 0.0,
+    "timeout": 60,
+    "max_retries": 3
+  },
+  "author": {
+    "research_depth": "comprehensive",
+    "citation_requirements": 3,
+    "min_word_count": 500,
+    "max_word_count": 2000,
+    "cultural_sensitivity_check": true,
+    "max_iterations": 3
+  },
+  "reviewer": {
+    "strictness_level": "high",
+    "cultural_accuracy_weight": 0.4,
+    "factual_accuracy_weight": 0.4,
+    "writing_quality_weight": 0.2,
+    "auto_approve_threshold": 0.9,
+    "max_iterations": 3
+  },
+  "chair": {
+    "publication_standards": "world-class",
+    "override_reviewer_threshold": 0.7,
+    "final_review_required": true
+  },
+  "web_research": {
+    "max_results": 5,
+    "search_timeout": 30,
+    "trusted_domains": [
+      "wikipedia.org",
+      "britannica.com",
+      "nationalgeographic.com",
+      "smithsonianmag.com",
+      "foodandwine.com"
+    ]
+  },
+  "monitoring": {
+    "enable_logging": true,
+    "log_level": "INFO",
+    "enable_metrics": true,
+    "enable_tracing": true
+  },
+  "content": {
+    "supported_languages": ["en", "ne", "hi", "zh", "bo"],
+    "default_language": "en",
+    "enable_multilingual": false,
+    "auto_translate": false
+  },
+  "environment": "development",
+  "debug": false,
+  "version": "1.0.0"
+}
