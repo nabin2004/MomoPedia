@@ -1,6 +1,6 @@
 # 🥟 MomoPedia
 
-**The world's first AI-powered encyclopedia dedicated exclusively to momos**
+**An AI-powered encyclopedia dedicated to momos**
 
 [![GitHub Pages](https://github.com/nabin/MomoPedia/workflows/Deploy%20Jekyll%20to%20GitHub%20Pages/badge.svg)](https://nabin.github.io/MomoPedia)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
@@ -11,7 +11,7 @@
 
 ## 🌟 Overview
 
-MomoPedia is a revolutionary AI-powered encyclopedia that celebrates the rich cultural heritage and diversity of momos - those beloved dumplings cherished across cultures. We combine cutting-edge AI technology with deep cultural respect to create comprehensive, authentic, and engaging content about momo varieties from around the world.
+MomoPedia is an AI-powered encyclopedia that celebrates the rich cultural heritage and diversity of momos—those beloved dumplings cherished across cultures. We combine AI technology with deep cultural respect to create comprehensive, authentic, and engaging content about momo varieties from around the world.
 
 ### ✨ Key Features
 
@@ -291,7 +291,7 @@ docker run -e OPENROUTER_API_KEY=your_key momopedia
 
 ## 🏆 Recognition
 
-MomoPedia represents a groundbreaking approach to cultural documentation through AI:
+MomoPedia represents an approach to cultural documentation using AI:
 
 - **Cultural Sensitivity**: Setting standards for respectful AI content generation
 - **Technical Innovation**: Advanced multi-agent workflow architecture

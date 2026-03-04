@@ -1,6 +1,6 @@
 # 🤝 Contributing to MomoPedia
 
-**Welcome to the MomoPedia community!** We're excited that you're interested in contributing to the world's first AI-powered momo encyclopedia. Whether you're a developer, cultural expert, food enthusiast, or momo lover, there are many ways to get involved.
+**Welcome to the MomoPedia community!** We're excited that you're interested in contributing to an AI-powered momo encyclopedia. Whether you're a developer, cultural expert, food enthusiast, or momo lover, there are many ways to get involved.
 
 ---
 

@@ -1,5 +1,5 @@
 # MomoPedia Design System
-*A comprehensive design system for the world's first AI-powered momo encyclopedia*
+*A comprehensive design system for an AI-powered momo encyclopedia*
 
 ## Typography Scale
 

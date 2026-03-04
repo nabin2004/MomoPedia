@@ -1,0 +1,97 @@
+/* Retro 90s theme for MomoPedia - classic wiki / early web look */
+
+/* Base reset for retro look */
+html, body {
+  background: #f2f2f2;
+  color: #000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+/* Container: boxed, centered, fairly narrow like old encyclopedias */
+.momo-container {
+  max-width: 980px;
+  margin: 1.25rem auto;
+  padding: 18px;
+  background: #fff;
+  border: 2px solid #cfcfcf;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.06);
+}
+
+/* Remove modern rounded corners and large shadows */
+* { border-radius: 0 !important; }
+
+/* Header: compact, left aligned brand, simple horizontal rule */
+.momo-header {
+  background: #e9e9e9;
+  border-bottom: 3px solid #c0c0c0;
+  position: relative;
+}
+.nav-container { padding: 10px 12px; }
+.brand-logo { gap: 6px; }
+.momo-icon { font-size: 1.5rem; margin-right: 6px; }
+
+/* Brand text with subtle multi-color nod to classic search logos */
+.brand-text {
+  display: inline-block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  background: linear-gradient(90deg, #4285F4 0%, #DB4437 33%, #F4B400 66%, #0F9D58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-tagline { font-size: 0.8rem; color: #333; margin-left: 8px; }
+
+/* Navigation: simple text links, underlined, small caps feel */
+.nav-menu ul { gap: 1rem; }
+.nav-link { color: #0645ad; text-decoration: underline; padding: 4px 6px; background: transparent; }
+.nav-link:hover, .nav-link.active { color: #0b57d0; background: #fff; font-weight: 700; }
+
+/* Make hamburger visible on small screens but keep blocky look */
+.nav-toggle { display: none; }
+
+/* Hero and sections: keep typography classic */
+.hero-section, .features-section, .recent-articles-section { background: transparent; padding: 18px 12px; }
+.hero-title { font-family: Georgia, 'Times New Roman', serif; font-size: 2.4rem; color: #000; }
+.hero-subtitle, .hero-description { color: #222; }
+
+/* Buttons: rectangular, beveled */
+.btn { border: 2px solid #666; background: #e8e8e8; color: #000; padding: 6px 10px; box-shadow: 2px 2px 0 rgba(0,0,0,0.08); }
+.btn:hover { background: #dcdcdc; }
+
+/* Links across content: classic blue underlined */
+article a, .momo-main a { color: #0645ad; text-decoration: underline; }
+article a:hover, .momo-main a:hover { color: #0b57d0; }
+
+/* Article card / lists: thin borders and square corners */
+.article-card, .feature-card { border: 1px solid #d0d0d0; background: #fff; box-shadow: none; }
+
+/* Footer: small, muted */
+.momo-footer { background: #e9e9e9; border-top: 3px solid #c0c0c0; color: #222; padding: 12px; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.footer-legal p { margin: 0; font-size: 0.85rem; }
+
+/* Code and pre: monospace, boxed */
+pre, code { font-family: 'Courier New', Courier, monospace; background: #f6f6f6; padding: 6px; border: 1px solid #ddd; }
+
+/* Force any rounded avatars or images to square to match retro feel */
+img { border-radius: 0 !important; }
+
+/* Accessibility: maintain high contrast for readability */
+body, .momo-container { color: #000; }
+
+/* Optional: page title bar like old wiki pages */
+.page-title-bar { border-bottom: 1px solid #cfcfcf; padding-bottom: 8px; margin-bottom: 12px; }
+
+/* Small screen adjustments to keep retro layout tidy */
+@media (max-width: 768px) {
+  .momo-container { margin: 8px; padding: 12px; }
+  .hero-title { font-size: 1.6rem; }
+  .nav-menu ul { flex-wrap: wrap; gap: .5rem; }
+}
+
+/* End retro stylesheet */

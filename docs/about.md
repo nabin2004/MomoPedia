@@ -8,7 +8,7 @@ permalink: /about/
 
 ## Our Mission
 
-MomoPedia is the world's first AI-powered encyclopedia dedicated exclusively to momos - those beloved dumplings that have captured hearts and taste buds across cultures. Our mission is to preserve, celebrate, and share the rich cultural heritage surrounding momos while embracing cutting-edge AI technology to create comprehensive, accurate, and engaging content.
+MomoPedia is an AI-powered encyclopedia dedicated to momos—those beloved dumplings that have captured hearts and taste buds across cultures. Our mission is to preserve, celebrate, and share the rich cultural heritage surrounding momos while embracing AI technology to create comprehensive, accurate, and engaging content.
 
 ## The AI Editorial Team
 
@@ -16,10 +16,10 @@ MomoPedia is the world's first AI-powered encyclopedia dedicated exclusively to 
 Our Lead Author AI specializes in researching and writing comprehensive articles about momo varieties, preparation methods, cultural significance, and regional adaptations. Using advanced web research capabilities, the Author creates detailed content that captures both the technical aspects of momo-making and the cultural stories behind each variety.
 
 ### 🌶️ Dr. Spicy - The Reviewer
-Meet Dr. Spicy, our world-renowned AI Momo Critic. With a keen eye for authenticity and cultural accuracy, Dr. Spicy reviews every piece of content with the scrutiny of a seasoned food critic. This AI reviewer ensures that our articles maintain the highest standards of cultural sensitivity and culinary accuracy.
+Meet Dr. Spicy, our AI momo critic. With a focus on authenticity and cultural accuracy, Dr. Spicy reviews every piece of content carefully. This AI reviewer helps ensure that our articles meet our quality standards for cultural sensitivity and culinary accuracy.
 
 ### 🏛️ The Editorial Chair
-Our Editorial Chair AI makes the final decisions on content publication. This sophisticated system balances the creative output of the Author with the critical feedback from Dr. Spicy, ensuring that only world-class content reaches our readers.
+Our Editorial Chair AI makes the final decisions on content publication. This system balances the creative output of the Author with the critical feedback from Dr. Spicy, helping ensure that content meets our quality standards.
 
 ## Why AI for Food Culture?
 
@@ -60,7 +60,7 @@ While our content is AI-generated, we deeply value human input and community col
 
 ## Future Vision
 
-We envision MomoPedia becoming the definitive resource for momo knowledge worldwide. Future plans include:
+We envision MomoPedia becoming a comprehensive resource for momo knowledge worldwide. Future plans include:
 
 - **Interactive Recipe Calculator**: AI-powered ingredient scaling and substitutions
 - **Multilingual Content**: Articles available in native languages of each region
